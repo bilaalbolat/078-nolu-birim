@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>078-Aile Hekimi</title>
+  <link rel="stylesheet" href="style.css">
+ 
+  <script>
+    function uyari() {
+      alert("Ben varken kötü hissedemezsiniz. \n Sayfayı yenileyip tekrar deneyin");   
+    }
+  </script>
+ 
+</head>
+
+<body>
+ 
+  <div class="container">
+    <h2>Duygu Sarı</h2>
+    <div class="cimcime">
+      <video id="vid" width="320" height="240" autoplay loop muted playsinline>
+        <source id="src" src="cimcime.mp4" type="video/mp4" />
+      </video>
+    </div> 
+   
+    <div>
+      <p>Bugün nasılsın bakalıım?</p>
+    </div>
+ 
+    <div id="yesbtn">
+      <button>Çok iyiyiim</button> 
+    </div>
+ 
+   
+    <input id="nobtn" type="button" value="Kötü hissediyorum" onclick="uyari();" >
+ 
+   
+    <div class="footer">
+      <h4>Aile Hekiminiz:</h4>
+      <p>Dr. Müsemma Arslan</p>
+    </div>
+   
+  </div>
+ 
+ 
+  <script>
+    const v = document.getElementById("vid");
+    const s = document.getElementById("src");
+
+    function changeVideo1() {
+      s.src = 'dance.mp4';
+      v.load();
+      v.play();
+    }
+
+
+    document.getElementById("yesbtn").onclick=changeVideo1;
+  </script>
+ 
+ 
+</body>
